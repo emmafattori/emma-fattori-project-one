@@ -6,17 +6,23 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+
+
 /* General Styling Begins */
 /* font-family: 'Iceberg', cursive;
 font-family: 'Montserrat', sans-serif; */
 
-/* *{
-	border:1px solid white;
+
+
+/* 
+html{
+	font-size: 62.5%;
+
 } */
 
-
 body {
-  /* font-size: 62.5%; */
+  
+  line-height:62.5%;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +33,22 @@ body {
   margin:0 auto;
   text-align:center;
 }
+
+h4{
+	font-size:30px;
+	color:white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:lighter;
+}
+
+
+
+p{
+	font-size: 16px;
+}
+
+
+
 /* Header Styling Begins */
 
 header {
@@ -45,14 +67,16 @@ header {
 	margin-top: 25px;
 }
 
-.header-sub p{
+.header-sub h5{
 	margin:20px;
 	padding: 5px;
+	font-weight: lighter;
 	
 }
 .main-nav{
 	width:80%;
 	margin:0 auto;
+	padding-top: 2%;
 }
 
 ul {
@@ -85,6 +109,7 @@ display:inline-block;
 	display:block;
 	margin: 10px;
 }
+
 .main-nav a,
 a:visited {
   color: white;
@@ -115,22 +140,28 @@ h1 {
 .left{
 	width:50%;
 	float:left;
-
+	padding-top:3%;
 	color:white;
 }
  h2{
 	font-family: 'Iceberg', cursive;
-	font-size:52px;
+	font-size:40px;
 	text-align:left;
 	color:white;
+	margin:0;
+	line-height:50px;
+	font-weight:lighter;
+	
+
 }
 
  p{
 	color:white;
 	font-family: 'Montserrat', sans-serif;
-	font-size:20px;
-	line-height:29px;
+	font-size:15px;
+	line-height:20px;
 	text-align:left;
+	padding-bottom:15px;
 }
 
 .image-right{
@@ -141,20 +172,22 @@ h1 {
 .image-right img{
 	width:100%;
 	display:block;
+	
 }
 
 .readMore{
 	background:#9200FF;
-	padding: 10px;
-	width:25%;
+	padding: 6px;
+	float:left;
+	margin-bottom:5%;
 }
 
 .readMore a{
 	color:white;
 	font-family: 'Iceberg', cursive;
-	font-size:25px;
+	font-size:20px;
 	text-decoration:none;
-	line-height:29px;
+	line-height:20px;
 }
 /* Experience Section styling begins */
 .experience{
@@ -170,6 +203,7 @@ h1 {
 .right2{
 	width:50%;
 	float:right;
+	padding-top:3%;
 }
 
 .image-left img{
@@ -180,23 +214,331 @@ h1 {
 .tickets{
 	clear:both;
 	background-color:#08080B;
+	padding: 5%;
 }
 
 .ticket-image{
-	width: 25%;
+	width: 30%;
 	float:left;	
 }
+
+
 
 .ticket-image img{
 	width:100%;
 }
 
 .ticket-info{
-	width:75%;
+	width:calc(70% - 15px);
 	float:left;
+	margin-left: 15px;
+}
+
+.ticket-container{
+	width:100%;
+}
+/* CTA section styling begins */
+.cta{
+	background-color:#3D0369;
+}
+.locations, .cta-tickets, .reach{
+	color:white;
+	display:inline-block;	
+	margin:8% 3%;
+
+}
+
+.cta i{
+	font-size:35px;
 }
 
 
+/* Gallery section styling begins */
+.gallery{
+	clear:both;
+	background-color:#0F0632;
+	padding-bottom: 5%;
+}
+
+.gallery h2{
+	text-align:center;
+	padding: 5%;
+}
+
+.gallery-image{
+	width: calc(94% / 3);
+	float:left;
+	margin: 1%;
+}
+.gallery-image img{
+	width:100%;
+}
+/* Footer Section Styling Begins */
+
+footer{
+	background:#3D0369;
+}
+
+.footer-left{
+	float:left;
+	width: 50%;
+	text-align:left;
+}
+
+.footer-left p{
+	width:67%;
+}
+
+.footer-right{
+	float:right;
+	width: 50%;
+	text-align: left;
+}
+
+footer h3{
+	color:white;
+	font-family: 'Iceberg', cursive;
+	font-size:40px;
+}
+
+input[type=email]{
+	float:left;
+	padding:9px 30% 9px 9px;
+}
 
 
+.copyright{
+	clear:both;
+	background:#0F0632;
+	color:white;
+}
 
+.copyright p{
+	margin:0;
+	text-align:center;
+	padding: 1%;
+}
+
+/* MEDIA QUERIES BEGIN */
+
+/* Start of 940px styling */
+@media (max-width: 940px){
+	h2{
+		font-size: 40px;
+	}
+
+	p{
+		font-size: 16px;
+		line-height: 20px;
+		
+	}
+
+	.social-nav{
+		display:none;
+	}
+}
+/* Start of 800px Media Query */
+@media (max-width: 800px){
+	h1{
+		width:40%;
+	}
+
+
+}
+/* Start of max 500px styling */
+@media (max-width: 500px){
+	
+	h1{
+		width: 40%;
+	}
+	.header-nav{
+		display:none;
+	}
+
+	.header-sub h5{
+		font-size: 25px;
+	}
+
+	
+
+	.locations, .cta-tickets, .reach{
+		width: 100%;
+	}
+
+ p{
+		padding-bottom: 15px;
+	}
+
+	.footer-left{
+		width: 100%;
+		text-align:center;
+	}
+
+	.footer-left p{
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.footer-right{
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-right p{
+		text-align: center;
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+
+	.footer-nav a{
+		font-size: 18px;
+	}
+
+	.subscribe a{
+		font-size:25px;
+	}
+
+
+}
+/* Start of max 650px styling */
+@media (max-width: 650px){
+	header h1{
+		font-size: 50px;
+	}
+
+	.left h2{
+		font-size: 30px;
+	}
+	
+	.right2 h2{
+		font-size: 30px;
+	}
+
+	.right2{
+		padding-top:0;
+	}
+
+	.readMore a{
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 890px){
+	h2{
+		font-size:41px;
+	}
+
+	p{
+		font-size:18px;
+		line-height:20px;
+		margin:0px;
+	}
+
+	h1{
+		font-size:70px;
+	}
+
+	.image-right, .left, .image-left, .right2, .ticket-image, .ticket-info{
+	width: 100%;
+	padding: 20px;
+	}
+
+	.subscribe{
+		width: 100%;
+
+	}
+
+	input[type="email"]{
+		width: 100%;
+	}
+
+
+	
+}
+
+
+/* Start of max 400px styling */
+@media (max-width: 400px){
+	p{
+		font-size:16px;
+	}
+	 h2{
+		font-size:36px;
+		margin-top:10%;
+	}
+	header{
+		background-position: center;
+	}
+
+	.main-nav{
+		display:none;
+	}
+
+	.social-nav{
+		display:none;
+	}
+
+	h1{
+		width:50%;
+		font-size:45px;
+		line-height:47px;
+		padding-top: 60%;
+	}
+
+	.left, .image-right, .image-left, .right2, .ticket-image, .ticket-info{
+		width:100%;
+	}
+
+	.cta{
+		padding: 10%;
+	}
+
+	.readMore{
+		margin-bottom: 10%;
+	}
+	.gallery{
+		padding-top:5%;
+	}
+
+	.gallery-container{
+		width:90%;
+	}
+
+	.gallery-image{
+		width:48%;
+		float:left;
+	}
+	.gallery-container :nth-last-child(3){
+		display:none;
+	}
+
+	.footer-left{
+		width:100%;
+		text-align:center;
+
+	}
+
+	.footer-left p{
+		width:85%;
+	}
+
+	.footer-right{
+		width:100%;
+		text-align:center;
+	}
+
+	.footer-right, .footer-left p{
+		text-align:center;
+		margin:0 auto;
+	}
+
+	input[type=email]{
+		width:100%;
+	}
+	.subscribe{
+		width:100%;
+	}
+}
+
+
+/* End of CSS Styling */
