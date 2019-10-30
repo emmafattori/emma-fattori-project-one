@@ -13,7 +13,23 @@
     <!-- Start of Header Section -->
     <header>
       <div class="wrapper">
+		  <div class="hamburger">
+			<i class="fas fa-bars"></i>
+		  </div>
+		  <div class="exit">
+			  <i class="fas fa-guitar"></i>
+		  </div>
+		<nav class="mobile-nav">
+			
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Blog">Blog</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
         <nav class="main-nav header-nav">
+
           <ul class="clearfix">
             <li><a href="#Home">Home</a></li>
             <li><a href="#About">About</a></li>
@@ -36,7 +52,7 @@
     <!-- Start of 'Performing' Section -->
     <section class="performing clearfix">
          <div class="image-right">
-          <img src="Thunder-Force-Stadium-assets/right-image.jpg" alt="Photo of a man singing into a microphone"/>
+          <img src="Thunder-Force-Stadium-assets/right-image-copy.jpg" alt="Photo of a man singing into a microphone"/>
         </div>
 		<aside class="left">
 			<div class="wrapper">
@@ -51,12 +67,12 @@
     <!-- Start of 'New Experiences' Section -->
     <section class="experience clearfix">
       	<div class="image-left">
-          <img src="Thunder-Force-Stadium-assets/left-image.jpg" alt="Close up image of a saxophone"/>
+          <img src="Thunder-Force-Stadium-assets/left-image-copy.jpeg" alt="Close up image of a saxophone"/>
         </div>
 		<aside class="right2">
 			<div class="wrapper">
 				<h2>New Experiences</h2>
-				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dicta eos nisi suscipit harum dolores earum consequuntur minima vel maxime. Sint eveniet voluptate voluptas dignissimos nisi, et quisquam explicabo eum laboriosam porro perspiciatis. Nihil enim quod reprehenderit, nemo recusandae adipisci.</p>
+				<p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam accusantium accusamus dolor dicta impedit cum hic ex suscipit ipsum sint eligendi voluptate in quas perspiciatis ullam maiores voluptatem. </p>
 				<div class="readMore">
 					<a href="#">Read More</a>
 				</div>
@@ -133,10 +149,12 @@
 		<div class="footer-right">
 			<h3>Stay Updated</h3>
 			<p>Subscribe to our newsletter to stay updated</p>
-			<input type="email" name="email" id="email" placeholder="email address"/>
-			<div class="subscribe readMore">
-				<a href="#">Subscribe</a>
-			</div>
+			<form class="clearfix" action="">
+				<input type="email" name="email" id="email" placeholder="email address"/>
+				<label class ="sr-only" for="subscribe">Subscribe</label>
+				<input type="submit" value="subscribe" name="subscribe">
+			</form>
+			
 		</div>
 	  </div>
     </footer>
@@ -146,5 +164,23 @@
 			<p>Copyright &copy; Juno College</p>
 		</div>
 	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").on('click', function(){
+				$(".mobile-nav").toggleClass("open")
+			});
+
+			$(".exit").on('click', function(){
+				$(".mobile-nav").toggleClass("open")
+			})
+
+
+		});
+	</script>
+
+	
   </body>
 </html>
